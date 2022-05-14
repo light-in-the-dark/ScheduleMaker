@@ -3,4 +3,4 @@
 Ну, что ж...\
 Побалуем старика)
 
-<img src=интерфейс.jpg>
+<img src=https://github.com/light-in-the-dark/ScheudleMaker/blob/master/interface.jpg>

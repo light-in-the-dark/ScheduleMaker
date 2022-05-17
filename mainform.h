@@ -77,8 +77,8 @@ namespace ScheudleMaker {
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::DataGridView^ table_scheudle;
 
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ firstCol;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ secondCol;
+
+
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
@@ -90,6 +90,10 @@ namespace ScheudleMaker {
 	private: System::Windows::Forms::TextBox^ textbox_6det_first;
 	private: System::Windows::Forms::Button^ button_clear;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ firstCol;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ secondCol;
+
+
 
 
 
@@ -109,6 +113,7 @@ namespace ScheudleMaker {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(mainform::typeid));
 			this->rbutton_2det = (gcnew System::Windows::Forms::RadioButton());
 			this->rbutton_3det = (gcnew System::Windows::Forms::RadioButton());
 			this->rbutton_4det = (gcnew System::Windows::Forms::RadioButton());
@@ -148,6 +153,7 @@ namespace ScheudleMaker {
 			// rbutton_2det
 			// 
 			this->rbutton_2det->AutoSize = true;
+			this->rbutton_2det->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->rbutton_2det->Location = System::Drawing::Point(12, 73);
 			this->rbutton_2det->Name = L"rbutton_2det";
 			this->rbutton_2det->Size = System::Drawing::Size(69, 17);
@@ -160,6 +166,7 @@ namespace ScheudleMaker {
 			// rbutton_3det
 			// 
 			this->rbutton_3det->AutoSize = true;
+			this->rbutton_3det->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->rbutton_3det->Location = System::Drawing::Point(12, 95);
 			this->rbutton_3det->Name = L"rbutton_3det";
 			this->rbutton_3det->Size = System::Drawing::Size(69, 17);
@@ -172,6 +179,7 @@ namespace ScheudleMaker {
 			// rbutton_4det
 			// 
 			this->rbutton_4det->AutoSize = true;
+			this->rbutton_4det->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->rbutton_4det->Location = System::Drawing::Point(12, 118);
 			this->rbutton_4det->Name = L"rbutton_4det";
 			this->rbutton_4det->Size = System::Drawing::Size(69, 17);
@@ -184,6 +192,7 @@ namespace ScheudleMaker {
 			// rbutton_5det
 			// 
 			this->rbutton_5det->AutoSize = true;
+			this->rbutton_5det->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->rbutton_5det->Location = System::Drawing::Point(12, 141);
 			this->rbutton_5det->Name = L"rbutton_5det";
 			this->rbutton_5det->Size = System::Drawing::Size(75, 17);
@@ -196,6 +205,7 @@ namespace ScheudleMaker {
 			// rbutton_6det
 			// 
 			this->rbutton_6det->AutoSize = true;
+			this->rbutton_6det->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->rbutton_6det->Location = System::Drawing::Point(12, 164);
 			this->rbutton_6det->Name = L"rbutton_6det";
 			this->rbutton_6det->Size = System::Drawing::Size(75, 17);
@@ -417,25 +427,31 @@ namespace ScheudleMaker {
 				this->firstCol,
 					this->secondCol
 			});
-			this->table_scheudle->Location = System::Drawing::Point(228, 33);
+			this->table_scheudle->Location = System::Drawing::Point(228, 12);
 			this->table_scheudle->Name = L"table_scheudle";
 			this->table_scheudle->RowHeadersVisible = false;
-			this->table_scheudle->Size = System::Drawing::Size(204, 150);
+			this->table_scheudle->Size = System::Drawing::Size(200, 186);
 			this->table_scheudle->TabIndex = 23;
 			// 
 			// firstCol
 			// 
+			this->firstCol->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::None;
 			this->firstCol->HeaderText = L"";
 			this->firstCol->Name = L"firstCol";
 			this->firstCol->ReadOnly = true;
+			this->firstCol->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			this->firstCol->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->firstCol->Width = 20;
 			// 
 			// secondCol
 			// 
+			this->secondCol->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::None;
 			this->secondCol->HeaderText = L"";
 			this->secondCol->Name = L"secondCol";
 			this->secondCol->ReadOnly = true;
+			this->secondCol->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			this->secondCol->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->secondCol->Width = 20;
 			// 
 			// button_clear
 			// 
@@ -473,6 +489,7 @@ namespace ScheudleMaker {
 			this->Controls->Add(this->rbutton_2det);
 			this->Controls->Add(this->groupBox2);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"mainform";
 			this->Text = L"Составитель расписаний";
@@ -688,4 +705,3 @@ namespace ScheudleMaker {
 		}
 	};
 }
-
